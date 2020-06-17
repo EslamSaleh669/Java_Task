@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         setCars();
                     } else {
-                        Toast.makeText(MainActivity.this, getResources().getString(R.string.someThingerror), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(MainActivity.this, getResources().getString(R.string.someThingerror), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
