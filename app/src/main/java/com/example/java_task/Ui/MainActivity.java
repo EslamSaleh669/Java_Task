@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout swipeRefreshLayout;
     private adapter_cars adapter_cars;
     private int mPage = 1;
+    private boolean isEnded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                if (mPage <= 5) {
+
+                if (!isEnded) {
                     mPage += 1;
                     getCars(mPage);
                 }
@@ -101,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         setCars();
                     } else {
-                      //  Toast.makeText(MainActivity.this, getResources().getString(R.string.someThingerror), Toast.LENGTH_SHORT).show();
+                        isEnded = true ;
+                      // Toast.makeText(MainActivity.this, getResources().getString(R.string.someThingerror), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
