@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Java_Task</string>
+    <string name="someThingerror">Something Error</string>
+    <string name="err_try">some errors occur try again</string>
+    <string name="time_out">This is Take Long Time ,Please Check your Internet Connection</string>
+    <string name="try_again">Try_Again</string>
+</resources>
